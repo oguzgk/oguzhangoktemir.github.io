@@ -42,6 +42,8 @@
   <link rel="stylesheet" type="text/css" href="assets/css/main.css">
   <!-- Responsive Style -->
   <link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
+  <!-- Modern Style Overrides -->
+  <link rel="stylesheet" type="text/css" href="assets/css/modern-style.css">
 
 </head>
 
@@ -61,8 +63,7 @@
             <span class="icon-menu"></span>
             <span class="icon-menu"></span>
           </button>
-          <a href="index.html" class="navbar-brand"><img src="assets/img/OGGY logo sadece yazı.jpg" style="width: 22%;"
-              alt="OGGY"></a>
+          <a href="index.html" class="navbar-brand"><img src="assets/img/OGGY logo sadece yazı.jpg" alt="OGGY"></a>
         </div>
         <div class="collapse navbar-collapse" id="main-navbar">
           <ul class="onepage-nev navbar-nav mr-auto w-100 justify-content-end clearfix">
@@ -93,7 +94,7 @@
       <!-- Mobile Menu Start -->
       <ul class="onepage-nev mobile-menu">
         <li>
-          <a href="#home">Ana sayfa</a>
+          <a href="#hero-area">Ana sayfa</a>
         </li>
         <li>
           <a href="#about">Hakkımda</a>
@@ -102,7 +103,7 @@
           <a href="#services">Notlar</a>
         </li>
         <li>
-          <a href="#contact">İletİşİm</a>
+          <a href="#contact">İletişim</a>
         </li>
       </ul>
       <!-- Mobile Menu End -->
@@ -132,7 +133,7 @@
                   <a class="twitter" href="https://twitter.com/oguz_gktmr"><i class="icon-social-twitter"></i></a>
                 </li>
                 <li>
-                  <a class="google" href="#contact"><i class="icon-social-google"></i></a>
+                  <a class="github" href="https://github.com/oguzgk"><i class="fa fa-github"></i></a>
                 </li>
               </ul>
             </div>
@@ -151,11 +152,12 @@
       <div class="row">
         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
           <div class="img-thumb wow fadeInLeft" data-wow-delay="0.3s">
-            <img class="img-fluid" src="oguzhanfoto.jpg" alt="Oğuzhan" style="width: 80%">
+            <img class="img-fluid" src="oguzhanfoto.jpeg" alt="Oğuzhan" style="width: 80%">
           </div>
         </div>
         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
           <div class="profile-wrapper wow fadeInRight" data-wow-delay="0.3s">
+
             <h3>Herkese Merhaba</h3>
             <p>Ben Oğuzhan Göktemir, Selçuk Üniversitesi Bilgisayar
               Mühendisliği Bölümü 4. Sınıf Öğrencisiyim. Web Teknolojileri,
@@ -166,8 +168,6 @@
               yönetiminde görev almaktayım. Ekip olarak projeler geliştirerek
               Teknofest ve Tübitak yarışmalarına katılıyorum.
             </p>
-            <p></p>
-
 
           </div>
         </div>
@@ -185,73 +185,75 @@
     <div class="container">
       <div class="row">
         <!-- Services item -->
-        <div class="col-md-6 col-lg-3 col-xs-12">
-
-          <button class="notlar"
-            onclick="document.location= 'https://positive-flyaway-d7e.notion.site/Notlar-84c4268ea8134fb3a5857ffbf5e37746?pvs=4'">
-            HTML5
-          </button>
-
+        <!-- Services item -->
+        <div class="col-md-6 col-lg-3 col-xs-12 mb-4">
+          <a href="https://positive-flyaway-d7e.notion.site/Notlar-84c4268ea8134fb3a5857ffbf5e37746?pvs=4"
+            class="notlar-card wow fadeInUp" data-wow-delay="0.2s">
+            <i class="fa fa-html5"></i>
+            <span>HTML5</span>
+          </a>
         </div>
         <!-- Services item -->
-        <div class="col-md-6 col-lg-3 col-xs-12">
-
-          <button class="notlar" id="cssnotu"
-            onclick="document.location='https://positive-flyaway-d7e.notion.site/CSS-Notlar-c625f1a231454e53b47cc9dff4d0ad6c?pvs=4'">
-            CSS3
-          </button>
-
-        </div>
-
-        <!-- Services item -->
-        <div class="col-md-6 col-lg-3 col-xs-12">
-
-          <button class="notlar" id="cppnotu"
-            onclick="document.location='https://positive-flyaway-d7e.notion.site/C-Notlar-646cdecf2ee64aa6a612e1a7cafb61fc?pvs=4'">
-            C++
-          </button>
-
+        <div class="col-md-6 col-lg-3 col-xs-12 mb-4">
+          <a href="https://positive-flyaway-d7e.notion.site/CSS-Notlar-c625f1a231454e53b47cc9dff4d0ad6c?pvs=4"
+            class="notlar-card wow fadeInUp" data-wow-delay="0.4s">
+            <i class="fa fa-css3"></i>
+            <span>CSS3</span>
+          </a>
         </div>
 
         <!-- Services item -->
-        <div class="col-md-6 col-lg-3 col-xs-12">
-
-          <button class="notlar" id="pythonnotlar"
-            onclick="document.location='https://positive-flyaway-d7e.notion.site/Python-Notlar-24a5b08e8e4b42a5a27e509f2a3fcd33?pvs=4'">
-            Python
-          </button>
+        <div class="col-md-6 col-lg-3 col-xs-12 mb-4">
+          <a href="https://positive-flyaway-d7e.notion.site/C-Notlar-646cdecf2ee64aa6a612e1a7cafb61fc?pvs=4"
+            class="notlar-card wow fadeInUp" data-wow-delay="0.6s">
+            <i class="fa fa-desktop"></i>
+            <span>C++</span>
+          </a>
         </div>
 
         <!-- Services item -->
-        <div class="col-md-6 col-lg-3 col-xs-12">
-          <button class="notlar" id="Javanotlar"
-            onclick="document.location='https://positive-flyaway-d7e.notion.site/Notlar-7159a62be18f4e93aa6712f0facbf6a6?pvs=4'">
-            Java
-          </button>
+        <div class="col-md-6 col-lg-3 col-xs-12 mb-4">
+          <a href="https://positive-flyaway-d7e.notion.site/Python-Notlar-24a5b08e8e4b42a5a27e509f2a3fcd33?pvs=4"
+            class="notlar-card wow fadeInUp" data-wow-delay="0.8s">
+            <i class="fa fa-code"></i>
+            <span>Python</span>
+          </a>
         </div>
 
         <!-- Services item -->
-        <div class="col-md-6 col-lg-3 col-xs-12">
-          <button class="notlar" id="sqlnotlar"
-            onclick="document.location='https://positive-flyaway-d7e.notion.site/SQL-Notlar-928cc8a2123849bbbc4d8b5ab5daab79?pvs=4'">
-            SQL
-          </button>
+        <div class="col-md-6 col-lg-3 col-xs-12 mb-4">
+          <a href="https://positive-flyaway-d7e.notion.site/Notlar-7159a62be18f4e93aa6712f0facbf6a6?pvs=4"
+            class="notlar-card wow fadeInUp" data-wow-delay="1.0s">
+            <i class="fa fa-coffee"></i>
+            <span>Java</span>
+          </a>
         </div>
 
         <!-- Services item -->
-        <div class="col-md-6 col-lg-3 col-xs-12">
-          <button class="notlar" id="Ccharpnotlar"
-            onclick="document.location='https://positive-flyaway-d7e.notion.site/C-Notlar-d934208d58fd43b2b17337d3839c160f?pvs=4'">
-            C#
-          </button>
+        <div class="col-md-6 col-lg-3 col-xs-12 mb-4">
+          <a href="https://positive-flyaway-d7e.notion.site/SQL-Notlar-928cc8a2123849bbbc4d8b5ab5daab79?pvs=4"
+            class="notlar-card wow fadeInUp" data-wow-delay="1.2s">
+            <i class="fa fa-database"></i>
+            <span>SQL</span>
+          </a>
         </div>
 
         <!-- Services item -->
-        <div class="col-md-6 col-lg-3 col-xs-12">
-          <button class="notlar" id="opencvnotlar"
-            onclick="document.location='https://positive-flyaway-d7e.notion.site/Open-CV-cc3ec2f567cf47cd8f109874191dfe5f?pvs=4'">
-            OpenCV
-          </button>
+        <div class="col-md-6 col-lg-3 col-xs-12 mb-4">
+          <a href="https://positive-flyaway-d7e.notion.site/C-Notlar-d934208d58fd43b2b17337d3839c160f?pvs=4"
+            class="notlar-card wow fadeInUp" data-wow-delay="1.4s">
+            <i class="fa fa-terminal"></i>
+            <span>C#</span>
+          </a>
+        </div>
+
+        <!-- Services item -->
+        <div class="col-md-6 col-lg-3 col-xs-12 mb-4">
+          <a href="https://positive-flyaway-d7e.notion.site/Open-CV-cc3ec2f567cf47cd8f109874191dfe5f?pvs=4"
+            class="notlar-card wow fadeInUp" data-wow-delay="1.6s">
+            <i class="fa fa-eye"></i>
+            <span>OpenCV</span>
+          </a>
         </div>
 
 
@@ -293,8 +295,10 @@
                   <div class="contact-icon">
                     <i class="fa fa-envelope"></i>
                   </div>
-                  <p>oguzhangoktemir473@gmail.com</p>
-                  <p>oguzhanngoktemir@gmail.com</p>
+                  <div class="contact-text">
+                    <p>oguzhangoktemir473@gmail.com</p>
+                    <p>oguzhanngoktemir@gmail.com</p>
+                  </div>
                 </div>
 
               </div>
@@ -323,7 +327,7 @@
                 <a class="twitter" href="https://twitter.com/oguz_gktmr"><i class="icon-social-twitter"></i></a>
               </li>
               <li>
-                <a class="google" href="#contact"><i class="icon-social-google"></i></a>
+                <a class="github" href="https://github.com/oguzgk"><i class="fa fa-github"></i></a>
               </li>
             </ul>
             <p>OĞUZHAN GÖKTEMİR</p>

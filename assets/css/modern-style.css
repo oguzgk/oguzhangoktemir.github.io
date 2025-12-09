@@ -1,0 +1,476 @@
+/* Modern Design Overrides */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+:root {
+  --primary-color: #00b4d9;
+  --primary-dark: #008ba8;
+  --text-dark: #1F2937;
+  --text-light: #6B7280;
+  --bg-light: #F9FAFB;
+  --white: #ffffff;
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+body {
+  font-family: 'Inter', sans-serif !important;
+  color: var(--text-dark);
+  background-color: var(--bg-light);
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Inter', sans-serif !important;
+  color: var(--text-dark);
+  font-weight: 700;
+}
+
+/* Navbar Modernization */
+.navbar {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: var(--shadow-sm);
+  padding: 15px 0;
+}
+
+.navbar-brand img {
+  border-radius: 8px;
+  /* Slightly improved logo look */
+  height: 50px;
+  width: auto;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+  color: var(--text-dark);
+  font-weight: 600;
+  text-transform: none;
+  /* Remove harsh uppercase */
+  font-size: 16px;
+  position: relative;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 5px;
+  left: 50%;
+  background-color: var(--primary-color);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.navbar-expand-lg .navbar-nav .nav-link:hover::after,
+.navbar-expand-lg .navbar-nav .active>.nav-link::after {
+  width: 80%;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link:hover,
+.navbar-expand-lg .navbar-nav .active>.nav-link {
+  color: var(--primary-color);
+}
+
+/* Hero Section */
+#hero-area {
+  background-attachment: fixed;
+}
+
+#hero-area .overlay {
+  /* background: linear-gradient(135deg, rgba(17, 24, 39, 0.85) 0%, rgba(0, 180, 217, 0.6) 100%); */
+  background: rgba(0, 0, 0, 0.6);
+  /* Reverting to a simple dark overlay for readability, similar to original */
+}
+
+#hero-area .contents .head-title {
+  font-size: 64px;
+  font-weight: 800;
+  letter-spacing: -2px;
+  text-transform: none;
+  margin-bottom: 20px;
+}
+
+#hero-area .contents h5.script-font {
+  font-family: 'Inter', sans-serif;
+  /* Replace script font for cleaner look */
+  font-weight: 300;
+  font-size: 24px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+#hero-area .contents p.script-font {
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  opacity: 0.9;
+}
+
+
+.social-icon li a {
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(5px);
+  color: #fff;
+  transition: all 0.3s ease;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  font-size: 20px;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-icon li a:hover {
+  transform: translateY(-5px);
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+  box-shadow: 0 5px 15px rgba(0, 180, 217, 0.4);
+}
+
+/* Section Titles */
+.section-title {
+  font-size: 36px;
+  margin-bottom: 60px;
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: var(--primary-color);
+  border-radius: 2px;
+}
+
+/* About Section */
+#about {
+  background: var(--white);
+}
+
+.profile-wrapper {
+  padding: 20px;
+}
+
+.profile-wrapper h3 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: var(--primary-color);
+}
+
+.profile-wrapper p {
+  color: var(--text-light);
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.img-thumb img {
+  border-radius: 20px;
+  box-shadow: var(--shadow-lg);
+  transition: transform 0.3s ease;
+  width: 100%;
+  /* Responsive fix */
+  max-width: 400px;
+  display: block;
+  margin: 0 auto;
+}
+
+.img-thumb img:hover {
+  transform: scale(1.02);
+}
+
+/* Services / Notlar Section */
+.services {
+  background: var(--bg-light);
+  padding: 80px 0;
+}
+
+/* Modern Card Style for Buttons */
+.notlar-card {
+  display: block;
+  background: var(--white);
+  border-radius: 16px;
+  padding: 30px 20px;
+  text-align: center;
+  box-shadow: var(--shadow-md);
+  transition: all 0.3s ease;
+  text-decoration: none !important;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  height: 100%;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.notlar-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--primary-color);
+}
+
+.notlar-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--primary-color);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+  transform-origin: left;
+}
+
+.notlar-card:hover::before {
+  transform: scaleX(1);
+}
+
+.notlar-card span {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-dark);
+  display: block;
+  margin-top: 10px;
+}
+
+.notlar-card i {
+  font-size: 40px;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+/* Contact Section */
+.contact-form-area {
+  border-radius: 20px;
+  box-shadow: var(--shadow-lg);
+  border: none;
+}
+
+.footer-right-contact {
+  border: none;
+  background: var(--bg-light);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.single-contact {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.single-contact .contact-icon {
+  position: relative;
+  top: auto;
+  left: auto;
+  transform: none;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+  background: rgba(0, 180, 217, 0.1);
+  color: var(--primary-color);
+  padding: 0;
+  flex-shrink: 0;
+  /* Prevent icon from being squashed */
+  border-radius: 50%;
+}
+
+.single-contact .contact-text {
+  min-width: 0;
+  /* Flexbox text overflow fix */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.single-contact p {
+  color: var(--text-dark);
+  font-weight: 500;
+  margin: 0;
+}
+
+/* Footer */
+footer.footer-area {
+  background: #111827;
+  padding: 40px 0;
+}
+
+.footer-text p {
+  opacity: 0.7;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+/* Floating Action Button (Fixed) */
+.back-to-top {
+  background: var(--primary-color);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  box-shadow: var(--shadow-lg);
+  display: flex !important;
+  /* Force flex to align icon */
+  align-items: center;
+  justify-content: center;
+  bottom: 30px;
+  right: 30px;
+  z-index: 9999;
+}
+
+/* Reset inner icon styles from old css */
+.back-to-top i {
+  display: inline-block !important;
+  background: none !important;
+  color: #fff !important;
+  width: auto !important;
+  height: auto !important;
+  line-height: 1 !important;
+  font-size: 20px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  box-shadow: none !important;
+}
+
+/* Mobile Responsive Overrides */
+@media (max-width: 768px) {
+
+  /* Navbar */
+  /* Navbar */
+  .navbar-header {
+    background: #fff;
+    position: relative;
+    min-height: 60px;
+    /* Ensure height for logo/button */
+    width: 100%;
+  }
+
+  .navbar-brand {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    z-index: 9999;
+    /* Ensure it stays above content */
+    padding: 0;
+  }
+
+  .navbar-brand img {
+    height: 40px;
+    /* Constrain height to fit header */
+    width: auto;
+  }
+
+  .slicknav_menu {
+    background: transparent;
+    padding: 0;
+    margin-top: 5px;
+    /* Adjust alignment */
+  }
+
+  .slicknav_btn {
+    background: transparent;
+    margin: 5px;
+  }
+
+  .slicknav_nav {
+    border-top: 1px solid #eee;
+  }
+
+  .slicknav_nav a {
+    color: var(--text-dark);
+    font-weight: 600;
+    padding: 15px;
+  }
+
+  /* Hero */
+  #hero-area .contents .head-title {
+    font-size: 36px;
+    /* Smaller title */
+    letter-spacing: -1px;
+  }
+
+  #hero-area .contents h5.script-font {
+    font-size: 20px;
+  }
+
+  #hero-area .contents {
+    padding: 120px 0 80px;
+  }
+
+  /* Buttons in hero */
+  #hero-area .social-icon li a {
+    width: 35px;
+    height: 35px;
+    font-size: 16px;
+    line-height: 35px;
+  }
+
+  /* Common Sections */
+  .section-padding {
+    padding: 40px 0;
+  }
+
+  .section-title {
+    font-size: 28px;
+    margin-bottom: 40px;
+  }
+
+  /* About */
+  .img-thumb {
+    margin-bottom: 30px;
+  }
+
+  .img-thumb img {
+    max-width: 100%;
+    width: 60%;
+    /* Smaller image on mobile */
+  }
+
+  .profile-wrapper {
+    padding: 0 10px;
+    text-align: center;
+  }
+
+  /* Contact */
+  .contact-form-area {
+    padding: 20px;
+  }
+
+  .footer-right-area {
+    margin-top: 40px;
+  }
+
+  /* Contact Email Single Line Fix */
+  .single-contact .contact-icon {
+    width: 32px;
+    /* Smaller icon to save space */
+    height: 32px;
+    font-size: 14px;
+    margin-right: 10px;
+    /* Reduced margin */
+  }
+
+  .single-contact p {
+    font-size: 11px;
+    /* Smaller font to fit long emails */
+    white-space: nowrap;
+    /* Force single line */
+  }
+}
